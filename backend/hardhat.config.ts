@@ -64,6 +64,7 @@ const config: HardhatUserConfig = {
       evmVersion: "cancun",
     },
   },
+  // FHEVM plugin configuration is handled by @fhevm/hardhat-plugin
   typechain: {
     outDir: "types",
     target: "ethers-v6",
