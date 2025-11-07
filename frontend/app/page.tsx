@@ -102,7 +102,7 @@ export default function HomePage() {
       <section className="card">
         <h2>Create New Project</h2>
         <p style={{ color: "var(--text-light)", marginBottom: "1rem" }}>
-          Start a new fundraising project. You'll be able to receive encrypted donations.
+          Start a new fundraising project. You'll be able to receive encrypted donations. Project owners can decrypt the total amount.
         </p>
         <div className="input-group">
           <input
