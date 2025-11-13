@@ -24,6 +24,7 @@ contract Donation is ZamaEthereumConfig {
     /// @notice Create a new donation project
     /// @param name Project name
     /// @return projectId Newly created project id
+    /// @dev Increments project counter and initializes project with encrypted zero total
     function createProject(string calldata name) external returns (uint256 projectId) {
         require(bytes(name).length > 0, "NAME_REQUIRED");
         projectId = ++_projectIdCounter;
