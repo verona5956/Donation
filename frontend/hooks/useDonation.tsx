@@ -41,6 +41,7 @@ export const useDonation = (parameters: {
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
   const [isDecrypting, setIsDecrypting] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  // State management for donation operations
   const [deployerAddress, setDeployerAddress] = useState<string | undefined>(undefined);
   const [projectOwner, setProjectOwner] = useState<string | undefined>(undefined);
   const [projectName, setProjectName] = useState<string | undefined>(undefined);
