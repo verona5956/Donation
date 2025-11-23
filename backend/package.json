@@ -20,6 +20,7 @@
     "@fhevm/solidity": "^0.9.1",
     "encrypted-types": "^0.0.4"
   },
+  // Updated FHEVM dependencies to latest stable versions
   "devDependencies": {
     "@fhevm/hardhat-plugin": "^0.3.0-1",
     "@fhevm/mock-utils": "0.1.0",
