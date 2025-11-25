@@ -1,0 +1,33 @@
+{
+  "name": "donation-fhevm-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "license": "BSD-3-Clause-Clear",
+  "scripts": {
+    "clean": "rimraf .next",
+    "dev": "npm run clean && npm run genabi && next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "genabi": "node ./scripts/genabi.mjs",
+    "ishhrunning": "node ./scripts/is-hardhat-node-running.mjs"
+  },
+  "dependencies": {
+    "@zama-fhe/relayer-sdk": "^0.3.0-5",
+    "@fhevm/mock-utils": "0.3.0-1",
+    "idb": "^8.0.3",
+    "next": "^15.4.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "ethers": "^6.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cross-env": "^7.0.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5"
+  }
+}
+
+
