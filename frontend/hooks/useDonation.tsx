@@ -112,7 +112,7 @@ export const useDonation = (parameters: {
     try {
       const sig = await FhevmDecryptionSignature.loadOrSign(instance, [donation.address as `0x${string}`], ethersSigner, storage);
       if (!sig) return;
-      const res = await instance.userDecrypt([{ handle: projectTotalHandle, contractAddress: donation.address }], sig.privateKey, sig.publicKey, sig.signature, sig.contractAddresses, sig.userAddress, sig.startTimestamp, sig.durationDays);
+      const res = await instance.userDecrypt([{ handle: projectTotalHandle, contractAddress: donation.address }], sig.privateKey, sig.publicKey, sig.signature, sig.contractAddresses, sig.userAddress, sig.startTimestamp, sig.durationDays) as Record<string, string | bigint | boolean>;
       setProjectTotalClear(res[projectTotalHandle]);
       projectTotalRef.current = { handle: projectTotalHandle, clear: res[projectTotalHandle] };
     } finally {
@@ -126,7 +126,7 @@ export const useDonation = (parameters: {
     try {
       const sig = await FhevmDecryptionSignature.loadOrSign(instance, [donation.address as `0x${string}`], ethersSigner, storage);
       if (!sig) return;
-      const res = await instance.userDecrypt([{ handle: myDonationHandle, contractAddress: donation.address }], sig.privateKey, sig.publicKey, sig.signature, sig.contractAddresses, sig.userAddress, sig.startTimestamp, sig.durationDays);
+      const res = await instance.userDecrypt([{ handle: myDonationHandle, contractAddress: donation.address }], sig.privateKey, sig.publicKey, sig.signature, sig.contractAddresses, sig.userAddress, sig.startTimestamp, sig.durationDays) as Record<string, string | bigint | boolean>;
       setMyDonationClear(res[myDonationHandle]);
       myDonationRef.current = { handle: myDonationHandle, clear: res[myDonationHandle] };
     } finally {
